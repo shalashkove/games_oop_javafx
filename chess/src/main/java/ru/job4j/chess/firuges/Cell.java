@@ -17,4 +17,20 @@ public enum Cell {
         this.x = x;
         this.y = y;
     }
+
+    /**
+     * return Cell by it X,Y coordinates
+     * @param x
+     * @param y
+     * @return
+     */
+    public static Cell returnCellbyXY(int x, int y) {
+        Cell result = Cell.A1;
+        for (Cell cell : Cell.values()) {
+            if (x == cell.x && y == cell.y) {
+                result = cell;
+            }
+        }
+        return result;
+    }
 }
